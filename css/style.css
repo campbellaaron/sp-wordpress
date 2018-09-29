@@ -1,18 +1,15 @@
 /* CSS Document */
 
-.yellow {
-	background-color: #F2DF00;
-}
-
-.jumbo-img {
-	width: 100%;
-}
-
 nav {
 	background: #000792;
 }
 
 .nav-link {
+	color: #F2DF00;
+	font-size: 20px;
+}
+
+.nav-link:hover {
 	color: #F2DF00;
 }
 

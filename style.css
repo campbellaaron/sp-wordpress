@@ -1,0 +1,128 @@
+/*
+Theme Name: Village of South Point
+Theme URI: http://campbelldev.net
+Author: Aaron Campbell
+Author URI: http://campbelldev.net
+Description: The official custom WordPress theme for the village of South Point
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://campbelldev.net
+Tags: blue, gold, south point, pointers, ohio, village, history
+*/
+
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700,700i|Source+Sans+Pro:400,400i,600,700,700i');
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+	background: #000792;
+}
+
+.nav-link {
+	color: #F2DF00;
+	font-size: 20px;
+}
+
+.nav-link:hover {
+	color: #F2DF00;
+}
+
+.navbar-toggler, .navbar-toggler-collapse {
+	background-color: #F2DF00;
+	padding: 10px;
+}
+
+.fas {
+	color: #000792;
+}
+
+.sp-logo {
+	width: 70px;
+	height: auto;
+}
+
+/* Menu Text (optional) */
+/*
+.fas p {
+	margin-top: 5px;
+	margin-bottom: -10px;
+}
+*/
+
+.jumbo-img {
+	height:600px;
+	display:block;
+	align-items:center;
+	background-image: url("/images/boatdock.jpg") no-repeat;
+	background-size:cover;
+	/* margin:100px 0px; */
+}
+
+.btn-outline-sp {
+	color: #F2DF00;
+  	background-color: transparent;
+  	background-image: none;
+  	border-color: #F2DF00;
+}
+
+.btn-outline-sp:hover {
+  color: #000792;
+  background-color: #F2DF00;
+  border-color: #F2DF00;
+}
+
+.sp-text-color, .sp-text-color:hover {
+	color: #F2DF00;
+}
+
+.white-header {
+	color: #fff;
+	font-size: 2em;
+	padding: 25px 250px 15px 50px;
+	margin-left: -3px;
+	margin-top: 5%;
+	background-color: rgba(61, 61, 61, 0.5);
+	width: 100%;
+}
+
+.white-header h1 {
+	font-family: 'Georgia', sans-serif;
+}
+
+
+/********FOOTER*********/
+.copyright {
+	margin-top: 20px;
+}
+
+.sp-footer {
+	padding-top: 60px;
+	background-color: #000792;
+	color: #F2DF00;
+	margin-top: 20px;
+}
+
+.firstFtr li {
+	list-style-type: none;
+	text-align: left;
+}
+
+.thirdFtr li {
+	list-style-type: none;
+}
+
+.sp-footer a {
+	color: #F2DF00;
+}
+
+.sp-footer a:hover {
+	color:#fff;
+}

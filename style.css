@@ -16,6 +16,11 @@ Tags: blue, gold, south point, pointers, ohio, village, history
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -37,11 +42,12 @@ nav {
 
 .navbar-toggler, .navbar-toggler-collapse {
 	background-color: #F2DF00;
-	padding: 10px;
+	padding: 15px;
 }
 
 .fas {
 	color: #000792;
+	font-size: 1.5em;
 }
 
 .sp-logo {
@@ -49,28 +55,19 @@ nav {
 	height: auto;
 }
 
-/* Menu Text (optional) */
-/*
-.fas p {
-	margin-top: 5px;
-	margin-bottom: -10px;
-}
-*/
-
 .jumbo-img {
-	height:600px;
-	display:block;
-	align-items:center;
-	background-image: url("/images/boatdock.jpg") no-repeat;
-	background-size:cover;
-	/* margin:100px 0px; */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
 }
 
 .btn-outline-sp {
 	color: #F2DF00;
   	background-color: transparent;
-  	background-image: none;
-  	border-color: #F2DF00;
+	background-image: none;
+	border: 1px solid #F2DF00; 
+
 }
 
 .btn-outline-sp:hover {
@@ -95,12 +92,26 @@ nav {
 
 .white-header h1 {
 	font-family: 'Georgia', sans-serif;
+	font-size: 5vw;
 }
 
+/**** In the News *******/
+.home-thumb img {
+	display: inline block;
+	width: 100px;
+	height: auto;
+}
+
+/** Newsletter SignUp **/
+.newsrow {
+	max-width: 600px;
+	margin: 0 auto;
+}
 
 /********FOOTER*********/
 .copyright {
 	margin-top: 20px;
+	font-size: 1rem;
 }
 
 .sp-footer {
@@ -125,4 +136,144 @@ nav {
 
 .sp-footer a:hover {
 	color:#fff;
+}
+
+/***INDEX.PHP***/
+.blog-img img{
+	margin-right: 20px;
+	width: 150px;
+	height: auto;
+}
+
+.blogIndex  {
+	margin: 20px 10px;
+	border-bottom: 1px solid #cecece;
+	padding: 1%;
+}
+
+.blogIndex a {
+	text-decoration: none;
+}
+
+.blogIndex h3 {
+	font-weight: 500;
+}
+
+/***SINGLE.PHP***/
+.blog-body-single {
+	margin: 20px 10px;
+	padding: 1%;
+}
+
+.blog-body-single h2 {
+	text-align: center;
+	margin: 5%;
+	font-weight: bold;
+}
+
+.blog-body-single img{
+	width: 70%;
+	margin-left: 15%;
+}
+
+.single-page-author {
+	margin: 1%;
+	border-bottom: 1px solid #cecece;
+}
+
+.blog-content {
+	margin: 20px 10px;	
+	padding: 1%;
+}
+
+.sidebar {
+	margin: 15% 0 0 0;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+    padding-left: 0;
+}
+
+/************* SEARCH.PHP ******************/
+.search-h2 {
+	margin-top: 10%;
+}
+
+.search-index {
+	margin: 2% 0 0 10%;
+	border-bottom: 1px solid #cecece;
+}
+
+.search-index a {
+	text-decoration: none;
+}
+
+.search-title:hover {
+	color: #000792;
+}
+
+/****** ORDINANCE LIST *******/
+
+.ordinance-index {
+	padding: 25px;
+}
+
+.ordinance-index h2 {
+	margin-top: 4%;
+	text-align: center;
+}
+
+.ordinance-index p {
+	text-align: center;
+}
+
+#ordTable a {
+	text-decoration: none;
+}
+
+.table th {
+	text-align: center;
+	color: white;
+	background-color: #0c0c0c;
+}
+
+.table td:last-child {
+	text-align: center;
+}
+
+/****************************
+		ORDINANCE ITEM
+****************************/
+
+.ordinance-item {
+	margin-top: 2%;
+}
+
+.ordinance-item h2 {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1%;
+}
+
+/****************************
+		COMMENTS SECTION
+****************************/
+
+.comment-meta img{
+	width: 64px;
+	height: auto;
+}
+
+.form-group {
+	width: 100%;
+}
+
+.comments {
+	border-top: 1px solid rgba(61, 61, 61, 0.5);
+	margin-top: 2%;
 }

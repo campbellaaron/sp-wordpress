@@ -15,40 +15,40 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"><!-- Optional Menu Text <p>Menu</p>--></i> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-			<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Government </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Board of Commissioners</a> 
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Education</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="http://www.southpointpd.com/" target="_blank">South Point Police Department</a> 
-            </div>
-          </li>
-			<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="developDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Development </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">LEDC</a> 
-				<a class="dropdown-item" href="#">Village Projects</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" target="_blank">South Point Police Department</a> 
-            </div>
-          </li>
-		  <li class="nav-item"> <a class="nav-link" href="#">Map</a> </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pay Online </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://www.ohioticketpayments.com/SouthPoint/DocketSearch.php" target="_blank">Ticket</a> <a class="dropdown-item" href="#">Utility Bill</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://www.officialpayments.com/pay-ohio-property-tax.jsp" target="_blank">Ohio Property Tax</a> 
-            </div>
-          </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Contact Us</a> </li>
+            <?php wp_nav_menu([
+                'theme_location' => 'primary',
+                'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+	            'container'       => 'div',
+	            'container_id'    => 'navbarSupportedContent',
+	            'menu_class'      => 'nav navbar-nav mr-auto',
+	            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+	            'walker'          => new WP_Bootstrap_Navwalker()
+            ]);
+            
+            ?>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" method="<?php echo esc_url(home_url('/')); ?>">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="s">
           <button class="btn btn-outline-sp my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
   </header>
+
+<!-- Modal -->
+<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Village Map</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Ends -->

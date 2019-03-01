@@ -25,9 +25,11 @@
     </div><!--Row Ends-->
     <div class="row">
         <div class="comments">
-            <?php if (comments_open()) :
-                comments_template();
-                endif ?>
+            <?php if (comments_open()) : ?>
+                <div class="comments-template">
+                    <?php comments_template(); ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div><!--Container Ends-->

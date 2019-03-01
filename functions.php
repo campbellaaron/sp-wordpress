@@ -92,6 +92,7 @@ function sp_sidebar($id){
 
 add_action('widgets_init', 'sp_sidebar');
 
+// BOOTSTRAP COMMENTS
 add_filter('comment_reply_link', 'sp_reply_link_class');
 function sp_reply_link_class($class){
 	$class = str_replace("class='comment-reply-link", "class='comment-reply-link btn btn-light btn-xs", $class);
@@ -102,18 +103,25 @@ function sp_comment_format($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 
 	<li <?php comment_class('media'); ?> id="comment-<?php comment_ID(); ?>">
-        <article class="comment-meta">
-            <p class="align-self-start mr-3"><?php echo get_avatar( $comment, 95 ); ?></p>
+        <article class="comment-meta media-body">
+            <p class="align-self-start mr-3 media-heading"><?php echo get_avatar( $comment, 96 ); ?></p>
             <div class="media-body">
                 <h5 class="mt-0"><?php comment_author_link(); ?> <small><i>Posted <?php echo human_time_diff( get_comment_time('U'), current_time('timestamp') ) . ' ago'; ?> </i></small></h5>
                 <?php if ($comment->comment_approved == '0') { // Awaiting Moderation ?>
                     <em><?php _e('Your comment is awaiting moderation.') ?></em>
                 <?php } ?>
                 <p class="media-body"><?php comment_text(); ?></p>
+                <!-- <div class="reply pull-right">
+                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<i class="icon-reply"></i>&nbsp; Reply' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                </div> -->
             </div>
         </article>
     </li>
 <?php } // sp_comment_format ends
+?> 
+
+<?php
+
 
 
 ?>

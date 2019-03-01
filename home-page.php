@@ -10,7 +10,7 @@ Template Name: Home Page
         <div class="container white-header">
           <h1 class="display-3"><?php bloginfo('name'); ?></h1>
           <p class="lead"><i><?php bloginfo('description'); ?></i></p>
-          <a class="btn btn-primary btn-lg sp-text-color" href="#" role="button">Learn more</a>
+          <a class="btn btn-primary btn-lg sp-text-color" href="./village-info/" role="button">Learn more</a>
         </div>
       </div>
   </section>
@@ -45,8 +45,13 @@ Template Name: Home Page
       <div class="jumbotron">
         <div class="container">
           <div class="row">
+            <div class="text-center col-md-6 col-12 mx-auto">
+              <h5>To receive Village information, news and updates: <br> Text  <b>SOPOINT</b>  to  <b>51660</b></h5>
+            </div>
+          </div>
+          <div class="row">
             <div class="text-center col-md-8 col-12 mx-auto">
-              <p class="lead">Click here to sign up for news updates!</p>
+              <p class="lead">Or, click here to sign up via email!</p>
             </div>
           </div>
           <div class="row">

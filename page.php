@@ -12,7 +12,7 @@
                             <?php endif; ?>
                             <h2 class="mt-0"><?php the_title(); ?></h2>
                         </div>
-                        <div class="media-body blog-content">
+                        <div class="media-body page-content">
                             <p><?php the_content(); ?></p>
                         </div>
                     </div><!--Blog List Body Ends-->

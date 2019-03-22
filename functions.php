@@ -45,7 +45,7 @@ global $wp_meta_boxes;
 wp_add_dashboard_widget('custom_help_widget', 'Theme Designer - Message', 'sp_admin_msg_text');
 }
 function sp_admin_msg_text() {
-echo '<p>This custom theme was created by <a href="http://campbelldev.net">Aaron Campbell</a>. For assistance contact us <a href="mailto:aaronwcampbell00@gmail.com" target="_blank">this email</a></p>';
+echo '<p>This custom theme was created by <a href="http://campbelldev.net">Aaron Campbell</a>. For assistance, use <a href="mailto:aaronwcampbell00@gmail.com" target="_blank">this email</a></p>';
 }
 
 function admin_ftr_txt(){

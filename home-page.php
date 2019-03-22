@@ -6,18 +6,37 @@ Template Name: Home Page
 
 <?php get_header(); ?>
   <section id="intro">
-      <div class="jumbotron jumbotron-fluid jumbo-img" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/boatdock.jpg');">
-        <div class="container white-header">
-          <h1 class="display-3"><?php bloginfo('name'); ?></h1>
-          <p class="lead"><i><?php bloginfo('description'); ?></i></p>
-          <a class="btn btn-primary btn-lg sp-text-color" href="./village-info/" role="button">Learn more</a>
+    <div id="spCarouselIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#spCarouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#spCarouselIndicators" data-slide-to="1"></li>
+        <li data-target="#spCarouselIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner sp-carousel">
+        <div class="carousel-item active">
+          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
+      <a class="carousel-control-prev" href="#spCarouselIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#spCarouselIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </section>
   <section id="news">
       <div class="container">
           <div class="row">
-              <div class="col-sm-12 text-center page-header">
+              <div class="col-sm-12 text-center news-header page-header">
                   <h2>In The News</h2>
               </div>
           </div>
@@ -32,7 +51,7 @@ Template Name: Home Page
                         <?php the_post_thumbnail(); ?>
                         <?php endif; ?>
                     </div>
-                    <h4><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h4>
+                    <h4 class="post-link"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h4>
                     <p class="mb-0"><?php the_excerpt(); ?></p>
                     <small class="blockquote-footer">Posted on <cite title="Source Title"><?php the_time('F j, Y'); ?></cite></small> 
                   </blockquote>
@@ -46,16 +65,9 @@ Template Name: Home Page
         <div class="container">
           <div class="row">
             <div class="text-center col-md-6 col-12 mx-auto">
-              <h5>To receive Village information, news and updates: <br> Text  <b>SOPOINT</b>  to  <b>51660</b></h5>
+              <h4>To receive Village information, news and updates: <br> Text  <b>SOPOINT</b>  to  <b>51660</b></h4>
+              <i class="fas fa-sms"></i>
             </div>
-          </div>
-          <div class="row">
-            <div class="text-center col-md-8 col-12 mx-auto">
-              <p class="lead">Or, click here to sign up via email!</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4 col-auto mx-auto"> <a class="btn btn-block btn-lg btn-success" href="#" title="" data-toggle="modal" data-target="#newsModal">Sign up now!</a> </div>
           </div>
         </div>
       </div>

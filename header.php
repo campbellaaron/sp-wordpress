@@ -5,7 +5,27 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo('name'); ?></title>
+    <title>
+    <?php if ( is_single() || is_page() ) {
+        bloginfo('name'); echo " - "; the_title(); 
+    } else {
+      bloginfo('name');
+  }
+    ?>  
+    </title>
+    <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>" />    <meta name="resource-type" content="document" />
+    <meta name="author" content="Village of South Point" />
+    <meta name="contact" content="info@villageofsouthpoint.com" />
+    <meta name="copyright" content="Copyright <?php echo date(Y); ?> Village of South Point. All Rights Reserved." />
+    <meta name="keywords" content="village, South Point, South Point Ohio, OH, news, the point, 
+                south point utilities, village ordinances, south point history, south point mayor,
+                south point village council, sp elementary, south point police, south point village,
+                south point ohio village ordinances, lawrence county chamber of commerce, south point park" />
     <?php wp_head(); ?>
   </head>
   <body>
@@ -16,8 +36,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <?php wp_nav_menu([
-                'theme_location' => 'primary',
-                'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+              'theme_location'  => 'primary',
+              'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
 	            'container'       => 'div',
 	            'container_id'    => 'navbarSupportedContent',
 	            'menu_class'      => 'nav navbar-nav mr-auto',
@@ -46,7 +66,7 @@
                 </button>
             </div>
             <div class="modal-body">
-            
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8944.228295543006!2d-82.5834832990358!3d38.419761585579124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884675592ec5d425%3A0x37097dd35be95111!2s415+Solida+Rd%2C+South+Point%2C+OH+45680!5e0!3m2!1sen!2sus!4v1551984185649" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

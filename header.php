@@ -32,6 +32,7 @@
   <header>
 	  <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/SPt_logo_color-150x150.jpg" alt="" class="rounded-circle img-fluid sp-logo"></a>
+      <h4 class="d-block d-sm-none xs-title">Village of South Point</h4>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"><!-- Optional Menu Text <p>Menu</p>--></i> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">

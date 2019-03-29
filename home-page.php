@@ -6,21 +6,38 @@ Template Name: Home Page
 
 <?php get_header(); ?>
   <section id="intro">
-    <div id="spCarouselIndicators" class="carousel slide" data-ride="carousel">
+    <div id="spCarouselIndicators" class="carousel slide sp-carousel" data-ride="carousel">
+      <div class="container white-header d-none d-sm-block">
+        <h1 class="display-6"><?php bloginfo('name'); ?></h1>
+        <p class="col-md"><i><?php bloginfo('description'); ?></i></p>
+        <a class="btn btn-lg sp-text-color" href="./village-info/" role="button">Learn more</a>
+      </div>  
       <ol class="carousel-indicators">
         <li data-target="#spCarouselIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#spCarouselIndicators" data-slide-to="1"></li>
         <li data-target="#spCarouselIndicators" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner sp-carousel">
+      <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
+          <?php if (get_field('first_slide')) : ?>
+            <img src="<?php the_field('first_slide'); ?>" class="d-block w-100" title="<?php the_field('first_slide_text'); ?>" alt="<?php the_field('first_slide_text'); ?>">
+            <?php elseif (empty(get_field('first_slide'))) : ?>
+            <img src="<?php bloginfo('template_directory'); ?>/images/default-slide.png" class="d-block w-100" title="Default Slider Image" alt="Default Slider Image, which is the boatdock in South Point">
+          <?php endif?>
         </div>
         <div class="carousel-item">
-          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
+          <?php if (get_field('second_slide')) : ?>
+            <img src="<?php the_field('second_slide'); ?>" class="d-block w-100" title="<?php the_field('first_slide_text'); ?>" alt="<?php the_field('first_slide_text'); ?>">
+            <?php elseif (empty(get_field('second_slide'))) : ?>
+            <img src="<?php bloginfo('template_directory'); ?>/images/default-slide.png" class="d-block w-100" title="Default Slider Image" alt="Default Slider Image, which is the boatdock in South Point">
+          <?php endif?>        
         </div>
         <div class="carousel-item">
-          <img src="<?php bloginfo('template_directory'); ?>/images/boatdock.jpg" class="d-block w-100" alt="...">
+          <?php if (get_field('third_slide')) : ?>
+            <img src="<?php the_field('third_slide'); ?>" class="d-block w-100" title="<?php the_field('first_slide_text'); ?>" alt="<?php the_field('first_slide_text'); ?>">
+            <?php elseif (empty(get_field('third_slide'))) : ?>
+            <img src="<?php bloginfo('template_directory'); ?>/images/default-slide.png" class="d-block w-100" title="Default Slider Image" alt="Default Slider Image, which is the boatdock in South Point">
+          <?php endif?>
         </div>
       </div>
       <a class="carousel-control-prev" href="#spCarouselIndicators" role="button" data-slide="prev">
@@ -53,7 +70,7 @@ Template Name: Home Page
                     </div>
                     <h4 class="post-link"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h4>
                     <p class="mb-0"><?php the_excerpt(); ?></p>
-                    <small class="blockquote-footer">Posted on <cite title="Source Title"><?php the_time('F j, Y'); ?></cite></small> 
+                    <small class="blockquote-footer">Posted on <cite title="<?php the_time('F j, Y'); ?>"><?php the_time('F j, Y'); ?></cite></small> 
                   </blockquote>
               </div>
               <?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
@@ -65,8 +82,8 @@ Template Name: Home Page
         <div class="container">
           <div class="row">
             <div class="text-center col-md-6 col-12 mx-auto">
-              <h4>To receive Village information, news and updates: <br> Text  <b>SOPOINT</b>  to  <b>51660</b></h4>
-              <i class="fas fa-sms"></i>
+            <p><i class="fas fa-mobile-alt"></i></p>  
+            <h4>To receive Village information, news and updates: <br> Text  <b>SOPOINT</b>  to  <b>51660</b></h4>
             </div>
           </div>
         </div>

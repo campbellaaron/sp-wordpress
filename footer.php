@@ -15,6 +15,11 @@
                 <?php if(is_active_sidebar('footer2')) : ?>
                 <?php dynamic_sidebar('footer2'); ?>
                 <?php endif; ?>
+                <div class="row">
+                  <div class="text-center col-md">
+                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#mapModal">View Map</button>
+                  </div>
+                </div>
               </div>
              <div class="col-sm-4 thirdFtr">
                 <?php if(is_active_sidebar('footer3')) : ?>

@@ -69,8 +69,8 @@ Template Name: Home Page
                         <?php endif; ?>
                     </div>
                     <h4 class="post-link"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h4>
-                    <p class="mb-0"><?php the_excerpt(); ?></p>
                     <small class="blockquote-footer">Posted on <cite title="<?php the_time('F j, Y'); ?>"><?php the_time('F j, Y'); ?></cite></small> 
+                    <p class="mb-0"><?php the_excerpt(); ?></p>
                   </blockquote>
               </div>
               <?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>

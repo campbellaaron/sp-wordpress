@@ -118,11 +118,4 @@ function sp_comment_format($comment, $args, $depth) {
         </article>
     </li>
 <?php } // sp_comment_format ends
-?> 
-
-<?php
-
-
-
 ?>
-
